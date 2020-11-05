@@ -21,6 +21,9 @@ def remove_columns(dataframe, sep='\t'):
     # Substitute Col1 and others with the name of the column in your dataframe
     # Add as many columns you want
     new_df = df[['Col1', 'Col2', 'Col3']]
+
+    # If you want to drop some few columns you can also use this from
+    # new_df = df.drop(['kt', 'kt_SE'], axis='columns')
     new_df.to_csv(r'exported.txt', index=None, sep=sep, mode='a')
 
 
