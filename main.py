@@ -31,7 +31,7 @@ def remove_columns(dataframe, sep='\t'):
     new_df.to_csv(r'pki.app.categorical.survival.analysis.results.txt', index=None, sep=sep, mode='a')
 
 
-# Press the green button in the gutter to run the script.
+# Executing the remove_columns function
 if __name__ == '__main__':
     file = 'pki.app.categorical.survival.id245.analysis.results.txt'
     remove_columns(file)
