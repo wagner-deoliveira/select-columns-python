@@ -16,7 +16,7 @@
 import pandas as pd
 from os import chdir
 
-path = 'C:/Users/DeOliW20137/Downloads/STL-896/STL-896/Comparison1'
+path = 'YOUR PATH TO FILE'
 chdir(path)
 
 
