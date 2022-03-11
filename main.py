@@ -16,7 +16,7 @@
 import pandas as pd
 from os import chdir
 
-path = 'C:/Users/DeOliW20137/OneDrive - PerkinElmer Inc/Documents/GitHub/spotfire-signals-qa/Tests/ExpectedData/SSIV-In Vivo Tests/SSIV-123/Comparison1'
+path = 'C:/Users/DeOliW20137/Downloads/STL-896/STL-896/Comparison1'
 chdir(path)
 
 
