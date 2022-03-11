@@ -16,22 +16,21 @@
 import pandas as pd
 from os import chdir
 
-path = 'C:/Users/DeOliW20137/Downloads/STL-896/STL-896/Comparison1'
+path = 'C:/Users/DeOliW20137/OneDrive - PerkinElmer Inc/Documents/GitHub/spotfire-signals-qa/Tests/ExpectedData/SSIV-In Vivo Tests/SSIV-123/Comparison1'
 chdir(path)
 
 
-def remove_columns(dataframe, sep='\t'):
+def remove_columns(dataframe, column_list, output_file, sep='\t'):
     df = pd.read_csv(dataframe, sep=sep)
     # Substitute Col1 and others with the name of the column in your dataframe
-    # Add as many columns you want
-    # new_df = df[['Col1', 'Col2', 'Col3']]
 
     # If you want to drop some few columns you can also use this from
-    new_df = df.drop(['Factor - Strata'], axis='columns')
-    new_df.to_csv(r'pki.app.categorical.survival.analysis.results.txt', index=None, sep=sep, mode='a')
+    new_df = df.drop(column_list, axis='columns')
+    new_df.to_csv(output_file, index=None, sep=sep, mode='a')
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    file = 'pki.app.categorical.survival.id245.analysis.results.txt'
-    remove_columns(file)
+    file = 'compounds.txt'
+    columns_to_remove = ['Comments']
+    remove_columns(file, columns_to_remove, file)
