@@ -16,7 +16,7 @@
 import pandas as pd
 from os import chdir
 
-path = 'C:/Users/DeOliW20137/Downloads/STL-896/STL-896/Comparison1'
+path = 'C:/DDaCT/SSIV-322/Comparison1'
 chdir(path)
 
 
@@ -26,7 +26,7 @@ def remove_columns(dataframe, column_list, output_file, sep='\t'):
 
     # If you want to drop some few columns you can also use this from
     new_df = df.drop(column_list, axis='columns')
-    new_df.to_csv(output_file, index=None, sep=sep, mode='a')
+    new_df.to_csv(output_file, index=None, sep=sep, mode='w')
 
 
 # Press the green button in the gutter to run the script.
