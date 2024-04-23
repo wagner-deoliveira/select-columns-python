@@ -10,17 +10,17 @@
 ## License: GPL 3.0
 ## Version: 1.0.0
 ## Maintainer: Wagner de O. da Rosa
-## Email: wagner.deoliveira@perkinelmer.com
+## Email: wagner.deoliveira@revvity.com
 ## Status: Deploy
 ##################################################
 import pandas as pd
 from os import chdir
 
-path = 'C:/DDaCT/SSIV-322/Comparison1'
+path = 'C:/DDaCT/SSC-1224/Comparison2'
 chdir(path)
 
 
-def remove_columns(dataframe, column_list, output_file, sep='\t'):
+def remove_columns(dataframe: str, column_list: list, output_file: str, sep='\t'):
     df = pd.read_csv(dataframe, sep=sep)
     # Substitute Col1 and others with the name of the column in your dataframe
 
@@ -29,8 +29,8 @@ def remove_columns(dataframe, column_list, output_file, sep='\t'):
     new_df.to_csv(output_file, index=None, sep=sep, mode='w')
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    file = 'compounds.txt'
-    columns_to_remove = ['Comments']
+    file = 'ResultsTable.txt'
+    columns_to_remove = ['Experiment_Hierarchy']
     remove_columns(file, columns_to_remove, file)
+# Press the green button in the gutter to run the script.
